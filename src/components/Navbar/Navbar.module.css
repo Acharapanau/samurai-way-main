@@ -1,6 +1,6 @@
 .nav {
     grid-area: n;
-    background-color: burlywood;
+    background-color: #192e54;
     padding: 20px;
 }
 
@@ -10,5 +10,5 @@
 }
 
 .item a.active {
-    color: blueviolet;
+    color: #9300ff;
 }
