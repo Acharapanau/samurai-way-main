@@ -6,7 +6,7 @@ import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
     return (
         <div className="">
             <ProfileInfo/>
-            <MyPosts posts={props.posts}/>
+            <MyPosts posts={props.state.posts}/>
         </div>
     );
 }

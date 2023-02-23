@@ -1,12 +1,12 @@
 import React from "react";
 import s from './MyPosts.module.css'
 import Post from "./Post/Post";
+import {state} from "../../../redux/state";
 
 
-
-const MyPosts = (props: any) => {
+const MyPosts = (props:any) => {
     let postsElements =
-        props.posts.map(p => <Post message={p.post} LikesCount={p.LikesCount}/>)
+        state.profilePage.posts.map(p => <Post message={p.post} LikesCount={p.LikesCount}/>)
 
     return (<div className={s.postsBlock}>
             <h3> My posts</h3>
