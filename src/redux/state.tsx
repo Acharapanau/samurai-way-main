@@ -1,35 +1,35 @@
 export type MessageType = {
-    id:number
-    message:string
+    id: number
+    message: string
 }
 
 
 export type DialogType = {
-    id:number
-    name:string
+    id: number
+    name: string
 }
 
 export type PostType = {
-    id:number
-    post:string
-    LikesCount:number
+    id: number
+    post: string
+    LikesCount: number
 }
 
 export type profilePageType = {
-   posts:Array<PostType>
+    posts: Array<PostType>
 }
 
 export type dialogsPageType = {
-    messages:Array<MessageType>
-    dialogs:Array<DialogType>
+    messages: Array<MessageType>
+    dialogs: Array<DialogType>
 }
 
 export type RootStateType = {
     profilePage: profilePageType
-    dialogsPage:dialogsPageType
+    dialogsPage: dialogsPageType
 }
 
-export let state : RootStateType = {
+export let state: RootStateType = {
     profilePage: {
         posts: [
             {id: 1, post: 'Hi, how are you?', LikesCount: 12},
