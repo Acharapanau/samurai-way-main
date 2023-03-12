@@ -8,11 +8,10 @@ const MyPosts = (props: any) => {
     let postsElements =
         state.profilePage.posts.map(p => <Post message={p.post} LikesCount={p.LikesCount}/>)
 
-    let newPostElement = React.createRef();
+    let newPostElement = React.createRef<HTMLTextAreaElement>();
 
     let addPost = () => {
-        let text = newPostElement.current.value;
-        alert(text);
+       alert(newPostElement.current?.value)
     }
 
     return (<div className={s.postsBlock}>
