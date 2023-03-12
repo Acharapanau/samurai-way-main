@@ -10,8 +10,10 @@ const MyPosts = (props: any) => {
 
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
-    let addPost = () => {
-       alert(newPostElement.current?.value)
+    const addPost = () => {
+        if (newPostElement.current) {
+            props.addPostCallBack(newPostElement.current.value)
+        }
     }
 
     return (<div className={s.postsBlock}>

@@ -52,4 +52,12 @@ export let state: RootStateType = {
     }
 
 }
+export const addPost = (postText: string ) => {
+    const newPost: PostType = {
+        id: new Date().getTime(),
+        post: postText,
+        LikesCount: 0
+    }
+    state.profilePage.posts.push(newPost);
+}
 
