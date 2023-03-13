@@ -7,7 +7,7 @@ import {addPost, RootStateType} from "./redux/state";
 
 export  const rerenderEntireTree = (state:RootStateType) => {
     ReactDOM.render(
-        <App state={state} addPost={addPost} />,
+        <App state={state} addPostCallBack={addPost} />,
         document.getElementById('root')
     );
 }

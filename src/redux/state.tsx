@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 export type MessageType = {
     id: number
     message: string
@@ -57,8 +59,9 @@ export const addPost = (postText: string ) => {
         id: new Date().getTime(),
         post: postText,
         LikesCount: 0
-    }
+    };
     state.profilePage.posts.push(newPost);
 
+    rerenderEntireTree(state)
 }
 
